@@ -11,6 +11,9 @@ int main(void)
 
 	for (int i = 0; i < 10; i++) {
 		arr[i] = (rand() % 52) + 1;
+		for (int j = 0; j < i; j++) {
+			if (arr[i] == arr[j]) i--;
+		}
 		cout << arr[i] << "\n";
 	}
 
